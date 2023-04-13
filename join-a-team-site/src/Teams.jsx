@@ -13,16 +13,16 @@ function Teams() {
 			vacancies: ['Designer', 'Engineer 1', 'Engineer 2'],
 			members: [
 				{
-					name: 'A',
-					role: 'Z',
+					name: 'Jenet',
+					role: 'UX Designer',
 				},
 				{
-					name: 'B',
-					role: 'Z',
+					name: 'Andy',
+					role: 'Engineer',
 				},
 				{
-					name: 'C',
-					role: 'Z',
+					name: 'Selena',
+					role: 'UI Designer',
 				},
 			],
 		},
@@ -74,6 +74,14 @@ function Teams() {
 							<div className="member-container">
 								{item.members.map((member, index) => (
 									<a href="/" key={index} className="member-item"></a>
+								))}
+							</div>
+							<div className="member-info-container">
+								{item.members.map((member, index) => (
+									<div className="member-info-item">
+										<p>{member.name}</p>
+										<p>{member.role}</p>
+									</div>
 								))}
 							</div>
 						</div>
