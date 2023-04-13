@@ -8,11 +8,25 @@
     background: #F9F9F9;
     margin-right: 50px;
     padding: 30px;
-    width: 600px;
-    height: 500px;
+    width: 620px;
+    height: 520px;
 }
 
-.team-container h1 {
+.team-item-extended {
+    border-radius: 40px;
+    background: #F9F9F9;
+    margin-right: 50px;
+    padding: 30px;
+    width: 620px;
+    height: 1040px;
+}
+
+.team-title {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.team-title h1 {
     color: #454545;
     font-size: 50px;
     font-weight: 400;
@@ -25,7 +39,7 @@
     font-weight: 400;
 }
 
-.hiring-title {
+.section-title {
     color: #383838;
     font-size: 30px;
     font-weight: 400;
@@ -58,4 +72,21 @@ a:hover {
 .vacancy {
     font-weight: 400;
     color: #297C50;
+}
+
+.member-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 30px;
+  }
+
+.member-item {
+    border: 9px solid #A3F7CB;
+    border-radius: 30px;
+    background: #DADADA;
+    margin-right: 20px;
+    padding: 55px;
+    width: 65px;
+    height: 200px;
+    text-align: center;
 }
