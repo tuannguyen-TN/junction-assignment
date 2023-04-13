@@ -11,8 +11,8 @@ router.route('/').get((req, res) => {
 });
 
 // retrieve a single team
-router.route('/:id').get((req, res) => {
-  Team.findById(req.params.id)
+router.route('/:title').get((req, res) => {
+  Team.findOne({ title: req.params.title.replace('-', ' ') })
     .then((team) => res.json(team))
     .catch((err) => res.status(400).json(err));
 });
