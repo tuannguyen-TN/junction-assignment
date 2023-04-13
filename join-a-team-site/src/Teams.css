@@ -105,3 +105,17 @@ a:hover {
     line-height: 30%;
     font-size: 18px;
 }
+
+.show-more-logos {
+    padding: 0;
+    margin: 140px auto auto 260px;
+    border: none;
+    background: none;
+}
+
+.show-less-logos {
+    padding: 0;
+    margin: 50px auto auto 240px;
+    border: none;
+    background: none;
+}

@@ -1,58 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Teams.css'
+import showMoreLogo from './assets/down-arrow.svg'
+import showLessLogo from './assets/up-arrow.svg'
+import axios from 'axios'
 
 function Teams() {
-	const [showMore, setShowMore] = useState(true)
-	const randomArr = [
-		{
-			title: 'Pink Unicorn',
-			challenge: 'Fazer',
-			description:
-				'We are a team of three friends studying at Aalto University. We have several ideas for the upcoming project but we are sure that we would like to approach the topic from a user centered point of view. We aim to develop a feasible and useful idea that is based on empathy and understanding of human psychology.',
-			idea: 'Our idea is to design a digital solution for mobile phones, which would focus on helping teenagers access free therapy sessions.',
-			vacancies: ['Designer', 'Engineer 1', 'Engineer 2'],
-			members: [
-				{
-					name: 'Jenet',
-					role: 'UX Designer',
-				},
-				{
-					name: 'Andy',
-					role: 'Engineer',
-				},
-				{
-					name: 'Selena',
-					role: 'UI Designer',
-				},
-			],
-		},
-		{
-			title: 'Discoverers',
-			challenge: 'Fazer',
-			description:
-				'We are a team of three friends studying at Aalto University. We have several ideas for the upcoming project but we are sure that we would like to approach the topic from a user centered point of view. We aim to develop a feasible and useful idea that is based on empathy and understanding of human psychology.',
-			idea: 'Our idea is to design a digital solution for mobile phones, which would focus on helping teenagers access free therapy sessions.',
-			vacancies: ['UX Designer', 'UI Designer', 'Engineer 2'],
-			members: [
-				{
-					name: 'A',
-					role: 'Z',
-				},
-				{
-					name: 'B',
-					role: 'Z',
-				},
-				{
-					name: 'C',
-					role: 'Z',
-				},
-			],
-		},
-	]
+	const [showMore, setShowMore] = useState(false)
+	const [teams, setTeams] = useState([])
+
+	useEffect(() => {
+		axios
+			.get('http://localhost:5000/teams')
+			.then((res) => setTeams(res.data))
+			.catch((err) => console.log(err))
+	}, [])
+
+	const toggleShowMore = () => {
+		setShowMore(!showMore)
+	}
 
 	return (
 		<div className="team-container">
-			{randomArr.map((item, index) => (
+			{teams.map((item, index) => (
 				<div key={index} className={showMore ? 'team-item-extended' : 'team-item'}>
 					<div className="team-title">
 						<h1>{item.title.toUpperCase()}</h1>
@@ -78,7 +47,7 @@ function Teams() {
 							</div>
 							<div className="member-info-container">
 								{item.members.map((member, index) => (
-									<div className="member-info-item">
+									<div key={index} className="member-info-item">
 										<p>{member.name}</p>
 										<p>{member.role}</p>
 									</div>
@@ -86,6 +55,15 @@ function Teams() {
 							</div>
 						</div>
 					) : null}
+					{showMore ? (
+						<button className="show-less-logos" onClick={toggleShowMore}>
+							<img src={showLessLogo} className="logo" alt="Up arrow" />
+						</button>
+					) : (
+						<button className="show-more-logos" onClick={toggleShowMore}>
+							<img src={showMoreLogo} className="logo" alt="Down arrow" />
+						</button>
+					)}
 				</div>
 			))}
 		</div>
