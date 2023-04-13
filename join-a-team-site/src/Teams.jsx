@@ -52,12 +52,16 @@ function Teams(props) {
 							</div>
 						))}
 					</div>
+					<div style={{ textAlign: 'center' }}>
+						<p style={{ lineHeight: '0%', color: '#6B6B6B', fontSize: '18px' }}>Get in touch</p>
+						<a className="contact-email" href={`mailto:${team.contact}`}>
+							{team.contact}
+						</a>
+					</div>
+					<button className="show-less-logos" onClick={toggleShowMore}>
+						<img src={showLessLogo} className="logo" alt="Up arrow" />
+					</button>
 				</div>
-			) : null}
-			{showMore ? (
-				<button className="show-less-logos" onClick={toggleShowMore}>
-					<img src={showLessLogo} className="logo" alt="Up arrow" />
-				</button>
 			) : (
 				<button className="show-more-logos" onClick={toggleShowMore}>
 					<img src={showMoreLogo} className="logo" alt="Down arrow" />

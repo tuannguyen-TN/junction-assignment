@@ -13,7 +13,7 @@
     margin-right: 50px;
     padding: 30px;
     width: 620px;
-    height: 1040px;
+    height: 1100px;
 }
 
 .team-title {
@@ -110,7 +110,22 @@ a:hover {
 
 .show-less-logos {
     padding: 0;
-    margin: 50px auto auto 240px;
+    margin: 40px auto auto 240px;
     border: none;
     background: none;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.contact-email {
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    background: none;
+    text-shadow: 0 0 .5px #000000;
 }
