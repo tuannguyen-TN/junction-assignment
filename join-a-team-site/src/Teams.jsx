@@ -23,7 +23,11 @@ function Teams(props) {
 			<h2 className="section-title">WE ARE LOOKING FOR</h2>
 			<div className="vacancy-container">
 				{team.vacancies.map((vacancy, index) => (
-					<a href="/" key={index} className="vacancy-item">
+					<a
+						href={`/team/${team.title}/vacancy/${vacancy.replace(' ', '-')}`}
+						key={index}
+						className="vacancy-item"
+					>
 						<h2 className="vacancy">{vacancy}</h2>
 					</a>
 				))}
@@ -33,7 +37,11 @@ function Teams(props) {
 					<h2 className="section-title">WHO WE ARE</h2>
 					<div className="member-container">
 						{team.members.map((member, index) => (
-							<a href="/" key={index} className="member-item"></a>
+							<a
+								href={`/team/${team.title}/member/${member.name.replace(' ', '-')}`}
+								key={index}
+								className="member-item"
+							></a>
 						))}
 					</div>
 					<div className="member-info-container">
