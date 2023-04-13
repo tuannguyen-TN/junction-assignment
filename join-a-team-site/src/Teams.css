@@ -1,0 +1,61 @@
+.team-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.team-item {
+    border-radius: 40px;
+    background: #F9F9F9;
+    margin-right: 50px;
+    padding: 30px;
+    width: 600px;
+    height: 500px;
+}
+
+.team-container h1 {
+    color: #454545;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 0%;
+}
+
+.challenge {
+    color: #69A988;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.hiring-title {
+    color: #383838;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.vacancy-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 30px;
+  }
+
+.vacancy-item {
+    border-radius: 30px;
+    background: #A3F7CB;
+    margin-right: 30px;
+    padding: 50px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) #A3F7CB;
+}
+
+.vacancy {
+    font-weight: 400;
+    color: #297C50;
+}

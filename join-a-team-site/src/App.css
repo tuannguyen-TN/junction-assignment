@@ -1,0 +1,20 @@
+.app {
+  font-family: Inter;
+  font-weight: 400;
+  margin: 90px 140px 90px 140px;
+}
+
+.intro {
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 80px;
+  line-height: 50px;
+  font-weight: 400;
+}
+
+.intro p {
+  color: #959595;
+  font-size: 20px;
+}
