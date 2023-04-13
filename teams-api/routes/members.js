@@ -10,8 +10,8 @@ router.route('/').get((req, res) => {
 });
 
 // retrieve a single member
-router.route('/:id').get((req, res) => {
-  Member.findById(req.params.id)
+router.route('/:name').get((req, res) => {
+  Member.findOne({ name: req.params.name.replace('-', ' ') })
     .then((member) => res.json(member))
     .catch((err) => res.status(400).json(err));
 });
@@ -43,8 +43,8 @@ router.route('/add').post((req, res) => {
 });
 
 // delete a member
-router.route('/:id').delete((req, res) => {
-  Member.findByIdAndDelete(req.params.id)
+router.route('/:name').delete((req, res) => {
+  Member.findOne({ name: req.params.name.replace('-', ' ') })
     .then(() => res.json('Member deleted!'))
     .catch((err) => res.status(400).json(err));
 });

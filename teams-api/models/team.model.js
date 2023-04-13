@@ -8,7 +8,7 @@ const teamSchema = new mongoose.Schema(
     description: String,
     idea: String,
     vacancies: [String],
-    members: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Member' }],
+    members: [{ name: String, role: String }],
     contact: String,
   },
   {

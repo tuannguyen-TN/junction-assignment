@@ -24,11 +24,8 @@ router.route('/add').post((req, res) => {
   const description = req.body.description;
   const idea = req.body.idea;
   const vacancies = req.body.vacancies;
-  const contact = req.body.contact;
   const members = req.body.members;
-  for (let element of members) {
-    element = new mongoose.Types.ObjectId(element);
-  }
+  const contact = req.body.contact;
 
   const newTeam = new Team({
     title,
