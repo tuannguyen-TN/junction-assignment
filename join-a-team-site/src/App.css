@@ -18,3 +18,8 @@
   color: #959595;
   font-size: 20px;
 }
+
+.team-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
