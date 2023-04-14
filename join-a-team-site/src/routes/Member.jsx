@@ -25,7 +25,15 @@ function Member() {
 				<div className="member-img"></div>
 				<div className="member-skills">
 					<h2>Skills</h2>
-					<p>{memberInfo.about}</p>
+					{memberInfo.skills &&
+						memberInfo.skills.map((item, index) => (
+							<div className="skill-display" key={index}>
+								{Array(item.proficiency).fill(<span className="validPoint"></span>)}
+								{Array(5 - item.proficiency).fill(<span className="invalidPoint"></span>)}
+								<span className="skill-title">{item.skill}</span>
+								<br />
+							</div>
+						))}
 				</div>
 				<div className="member-about">
 					<h2>About Me</h2>

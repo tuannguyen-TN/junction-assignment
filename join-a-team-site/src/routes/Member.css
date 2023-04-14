@@ -61,3 +61,36 @@ h2 {
 .member-about {
     font-weight: 300;
 }
+
+.validPoint {
+    height: 20px;
+    width: 20px;
+    background-color: #F88C3D;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.invalidPoint {
+    height: 20px;
+    width: 20px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.skill-title {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.skill-display {
+    display: inline;
+}
+
+span + span {
+    margin-left: 5px;
+}
