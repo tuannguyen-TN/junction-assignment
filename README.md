@@ -18,6 +18,14 @@ In this assignment, I used the MERN (MongoDB, Express, React, Node) stack. In ad
 
 With that said, in order to run the app, it is necessary to run the development command from both directories since they fulfil different purposes.
 
+Before running backend, we need the credentials to the MongoDB database. The credentials are stored in `process.env` file.
+
+```
+// with pwd = .../junction-assignment/
+cd teams-api/
+cp process.env .env
+```
+
 To run the app, first run the backend:
 
 ```
