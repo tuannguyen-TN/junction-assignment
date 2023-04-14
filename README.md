@@ -31,13 +31,15 @@ To run the app, first run the backend:
 ```
 // with pwd = .../junction-assignment/
 cd teams-api/
-npm run dev
+npm install
+nodemon index.js
 ```
 
 then from another command line tab, run the frontend:
 
 ```
 // with pwd = .../junction-assignment/
+npm install
 cd join-a-team-site/
 npm run dev
 ```
