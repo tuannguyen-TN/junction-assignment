@@ -67,6 +67,8 @@ a:hover {
 .vacancy {
     font-weight: 400;
     color: #297C50;
+    font-size: 25px;
+    line-height: 25px;
 }
 
 .member-container {

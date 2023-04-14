@@ -28,7 +28,7 @@ function Teams(props) {
 						key={index}
 						className="vacancy-item"
 					>
-						<h2 className="vacancy">{vacancy}</h2>
+						<p className="vacancy">{vacancy}</p>
 					</a>
 				))}
 			</div>
