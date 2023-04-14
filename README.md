@@ -39,8 +39,8 @@ then from another command line tab, run the frontend:
 
 ```
 // with pwd = .../junction-assignment/
-npm install
 cd join-a-team-site/
+npm install
 npm run dev
 ```
 
